@@ -5,6 +5,8 @@ metadata:
     app: sample
   name: sample
 spec:
+  path:
+    /HelloWorld/hello
   port:
     targetPort: http
   to:
