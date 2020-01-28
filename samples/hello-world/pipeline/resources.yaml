@@ -8,6 +8,8 @@ spec:
   params:
     - name: url
       value: https://github.com/gmarcy/ci.docker.websphere-traditional
+    - name: revision
+      value: tekton-testing
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
