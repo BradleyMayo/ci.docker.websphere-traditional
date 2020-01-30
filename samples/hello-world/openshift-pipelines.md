@@ -1,4 +1,4 @@
-### Example setup for using OpenShift Pipelines to build and deploy the hello-world sample
+# Example setup for using OpenShift Pipelines to build and deploy the hello-world sample
 
 ## Create a new project
 oc new-project hello-world-pipeline
