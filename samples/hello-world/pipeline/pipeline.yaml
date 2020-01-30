@@ -22,6 +22,8 @@ spec:
           - name: image
             resource: sample-image
       params:
+        - name: DOCKERFILE
+          value: "Dockerfile-ubi"
         - name: CONTEXT
           value: "samples/hello-world"
         - name: TLSVERIFY
