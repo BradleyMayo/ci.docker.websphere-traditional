@@ -11,29 +11,29 @@ To create an image with the latest fixpack version of IBM Websphere Application 
 
 For example:
 ```
-docker build -t websphere-traditional:9.0.0.9-ilan . \
+docker build -t websphere-traditional:8.5.5.17-ilan . \
     --build-arg IBMID={IBMid} \
     --build-arg IBMID_PWD={IBMid_password} \
     --build-arg IMURL={IBM_Installation_Manager_download_url}
 ```
 
-To create an image with the latest fixpack version of IBM WebSphere Application Server V9.0, you will also need to override the build arguments for PRODUCTID and REPO.
+To create an image with the latest fixpack version of IBM WebSphere Application Server V8.5, you will also need to override the build arguments for PRODUCTID and REPO.
 
 For example:
 ```
-docker build -t websphere-traditional:9.0.0.9-base . \
+docker build -t websphere-traditional:8.5.5.17-base . \
     --build-arg IBMID={IBMid} \
     --build-arg IBMID_PWD={IBMid_password} \
     --build-arg IMURL={IBM_Installation_Manager_download_url} \
-    --build-arg PRODUCTID=com.ibm.websphere.BASE.v90 \
-    --build-arg REPO=https://www.ibm.com/software/repositorymanager/com.ibm.websphere.BASE.v90
+    --build-arg PRODUCTID=com.ibm.websphere.BASE.v855 \
+    --build-arg REPO=https://www.ibm.com/software/repositorymanager/com.ibm.websphere.BASE.v855
 ```
 
 To create an image with the latest fixpack version with all recommended iFixes, you will include the build-arg ```IFIXES=recommended```
 
 For example:
 ```
-docker build -t websphere-traditional:9.0.0.9-ilan . \
+docker build -t websphere-traditional:8.5.5.17-ilan . \
     --build-arg IBMID={IBMid} \
     --build-arg IBMID_PWD={IBMid_password} \
     --build-arg IMURL={IBM_Installation_Manager_download_url} \
