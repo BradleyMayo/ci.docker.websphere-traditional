@@ -14,8 +14,8 @@ HEAP_XMX=1024m
 for i in $@
 do
 	case $i in
-    --HEAP_XMX=*)
-    HEAP_XMX="${i#*=}"
+	--HEAP_XMX=*)
+	HEAP_XMX="${i#*=}"
 esac
 done
 
