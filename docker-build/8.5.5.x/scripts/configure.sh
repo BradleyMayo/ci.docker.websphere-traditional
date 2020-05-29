@@ -10,6 +10,18 @@ stop_server()
     kill -s INT $PID
 }
 
+HEAP_XMX=1024m
+for i in $@
+do
+	case $i in
+    --HEAP_XMX=*)
+    HEAP_XMX="${i#*=}"
+esac
+done
+
+echo "Running '/opt/IBM/WebSphere/AppServer/bin/wsadmin.sh -javaoption \"-Xmx$HEAP_XMX\"'"
+/opt/IBM/WebSphere/AppServer/bin/wsadmin.sh -javaoption "-Xmx$HEAP_XMX"
+
 echo "Setting Password"
 /work/set_password.sh
 start_server
